@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="React Shopping Cart Scenario 1" timestamp="2022-05-02T10:24:37" time="1.049" tests="1" failures="0" errors="0" skipped="0">
+  <testsuite name="React Shopping Cart" timestamp="2022-05-04T09:45:47" time="1.571" tests="2" failures="0" errors="0" skipped="0">
     <properties>
       <property name="specId" value="0"/>
-      <property name="featureName" value="React Shopping Cart - Scenario 1"/>
-      <property name="capabilities" value="chrome.100_0_4896_127.macosx"/>
+      <property name="featureName" value="React Shopping Cart"/>
+      <property name="capabilities" value="chrome.101_0_4951_54.macosx"/>
       <property name="featureFile" value="./features/step-definitions/shoppingCart.feature"/>
     </properties>
-    <testcase classname="CucumberJUnitReport-chrome.100_0_4896_127.macosx.React Shopping Cart Scenario 1" name="As a user I am able to add one item to the shopping cart and clear the shopping cart" time="1.02">
+    <testcase classname="CucumberJUnitReport-chrome.101_0_4951_54.macosx.React Shopping Cart" name="As a user I am able to add one item to the shopping cart and clear the shopping cart" time="1.038">
       <system-out><![CDATA[
 ✅ Given I am on the store page✅ When I am able to add one t-shirt to the cart✅ Then The t-shirt should be visible in the cart page✅ Then The total payment amount must be equal to the total price of the t-shirt✅ Then I am able to delete the t-shirt✅ When I clear the cart✅ Then The cart will be clear of items
+]]></system-out>
+    </testcase>
+    <testcase classname="CucumberJUnitReport-chrome.101_0_4951_54.macosx.React Shopping Cart" name="As a user I am able to add two items to the shopping cart increase and decrease the quantitiy of the first item delete the second item and checkout of the cart sucessfully" time="0.487">
+      <system-out><![CDATA[
+✅ Given I am on the store page✅ When I add two t-shirts to the cart✅ Then The two t-shirts should be visible in the cart page✅ When I increase the quantity of the first t-shirt to three✅ Then The total payment amount must be equal to the total price of the four t-shirts in the cart✅ When I decrease the quantity of the first item to two✅ Then The total payment amount must be equal to the total price of the three t-shirts in the cart✅ When I delete the second item✅ Then There only should be one item in the cart✅ When I checkout of the cart✅ Then The website tells me I have successfully checked out✅ Then The cart will be clear of items
 ]]></system-out>
     </testcase>
   </testsuite>

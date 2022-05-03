@@ -5,10 +5,7 @@ const { default: $$ } = require('webdriverio/build/commands/browser/$$')
 const cartPage = require('../pageObjects/cartPage')
 const store = require('../pageObjects/storePage')
 //const config = require('../')
-Given(/^I am on the store page$/, async()=>
-{
-    await browser.url('http://localhost:3000/')
-})
+
 
 When(/^I am able to add one t-shirt to the cart$/, async()=>
 {
@@ -36,18 +33,14 @@ Then(/^I am able to delete the t-shirt$/, async()=>
     await cartPage.deleteButtonExists()
 })
 
+
+
 When(/^I clear the cart$/, async()=>
 {
     await cartPage.clearCart()
    
 
 })
-
-Then(/^The cart will be clear of items$/, async()=>
-{
-    await cartPage.verifyCartClear()
-})
-
 
     
 

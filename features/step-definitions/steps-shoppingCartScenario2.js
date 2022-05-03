@@ -9,11 +9,6 @@ const store = require('../pageObjects/storePage')
 //const config = require('../')
 
 
-Given(/^I am on the store page$/, async()=>
-{
-    await browser.url('http://localhost:3000/')
-})
-
 When(/^I add two t-shirts to the cart$/, async()=>
 {
     await store.addItemToCart(numberOfShirts = 2)
@@ -66,12 +61,6 @@ Then(/^The website tells me I have successfully checked out$/, async()=>
 {
     await cartPage.checkoutSuccessfull()
 })
-
-Then(/^The Cart will be clear of items$/, async()=>
-{
-    await cartPage.verifyCartClear()
-})
-
 
 
 
