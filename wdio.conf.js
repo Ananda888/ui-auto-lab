@@ -4,6 +4,13 @@ exports.config = {
     // Runner Configuration
     // ====================
     //
+     // runner: 'local',
+    
+
+      //Server configurations
+      //hostname: 'localhost',
+      //port: 4444,
+      //path: '/wd/hub',
     //
     // ==================
     // Specify Test Files
@@ -21,7 +28,7 @@ exports.config = {
     // will be called from there.
     //
     specs: [
-        './features/**/*.feature'
+        './features/step-definitions/shoppingCart.feature'
     ],
     // Patterns to exclude.
     exclude: [
@@ -54,15 +61,35 @@ exports.config = {
         // maxInstances can get overwritten per capability. So if you have an in-house Selenium
         // grid with only 5 firefox instances available you can make sure that not more than
         // 5 instances get started at a time.
-        maxInstances: 5,
-        //
+        maxInstances: 1,
         browserName: 'chrome',
-        acceptInsecureCerts: true
+        acceptInsecureCerts: true,
+        'goog:chromeOptions': {
+            args: [
+                '--no-sandbox',
+                '--disable-infobars',
+                '--headless',
+                '--disable-gpu',
+                '--window-size=1440,735'
+              ],
+            },
         // If outputDir is provided WebdriverIO can capture driver session logs
         // it is possible to configure which logTypes to include/exclude.
         // excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
-        // excludeDriverLogs: ['bugreport', 'server'],
-    }],
+        //excludeDriverLogs: ['bugreport', 'server']
+    },
+        {
+        maxInstances: 1,
+        browserName: 'firefox',
+        // specs: [
+        //     'test/ffOnly/*'
+        // ],
+        'moz:firefoxOptions': {
+          // flag to activate Firefox headless mode (see https://github.com/mozilla/geckodriver/blob/master/README.md#firefox-capabilities for more details about moz:firefoxOptions)
+          args: ['-headless']
+        },
+        }
+      ],
     //
     // ===================
     // Test Configurations
@@ -110,7 +137,7 @@ exports.config = {
     // Services take over a specific job you don't want to take care of. They enhance
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
-    services: ['chromedriver'],
+    services: ['selenium-standalone'],
     
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber
@@ -132,14 +159,28 @@ exports.config = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter
-    reporters: ['spec'],
+    reporters: [
+        "spec",
+        [
+          "junit",
+          {
+            outputDir:"./reports/junit/",
+            outputFileFormat: function (options) {
+              // optional
+              return `results-${options.cid}.${options.capabilities.browserName}.xml`;
+            }
+          }
+        ],
+    
+    ],
 
 
     //
     // If you are using Cucumber you need to specify the location of your step definitions.
     cucumberOpts: {
         // <string[]> (file/dir) require files before executing features
-        require: ['./features/step-definitions/steps.js'],
+        require: ['./features/step-definitions/steps-shoppingCartScenario1.js', './features/step-definitions/steps-shoppingCartScenario2.js'
+      , './features/step-definitions/steps-common.js'],
         // <boolean> show full backtrace for errors
         backtrace: false,
         // <string[]> ("extension:module") require files with the given EXTENSION after requiring MODULE (repeatable)
