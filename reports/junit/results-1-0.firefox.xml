@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="React Shopping Cart" timestamp="2022-05-06T09:42:00" time="1.238" tests="2" failures="2" errors="2" skipped="0">
+  <testsuite name="React Shopping Cart" timestamp="2022-05-06T10:06:57" time="0.497" tests="2" failures="2" errors="2" skipped="0">
     <properties>
       <property name="specId" value="0"/>
       <property name="featureName" value="React Shopping Cart"/>
-      <property name="capabilities" value="firefox.99_0_1.linux"/>
+      <property name="capabilities" value="firefox.83_0.linux"/>
       <property name="featureFile" value="./features/step-definitions/shoppingCart.feature"/>
     </properties>
-    <testcase classname="CucumberJUnitReport-firefox.99_0_1.linux.React Shopping Cart" name="As a user I am able to add one item to the shopping cart and clear the shopping cart" time="0.664">
+    <testcase classname="CucumberJUnitReport-firefox.83_0.linux.React Shopping Cart" name="As a user I am able to add one item to the shopping cart and clear the shopping cart" time="0.281">
       <failure/>
       <error message="unknown error: Reached error page: about:neterror?e=connectionFailure&amp;u=http%3A//localhost%3A3000/&amp;c=UTF-8&amp;d=Firefox%20can%E2%80%99t%20establish%20a%20connection%20to%20the%20server%20at%20localhost%3A3000."/>
       <system-out><![CDATA[
@@ -25,7 +25,7 @@ unknown error: Reached error page: about:neterror?e=connectionFailure&u=http%3A/
     at async World.<anonymous> (/Users/anachu/easytravel-automation-test/features/step-definitions/steps-common.js:12:5)
 ]]></system-err>
     </testcase>
-    <testcase classname="CucumberJUnitReport-firefox.99_0_1.linux.React Shopping Cart" name="As a user I am able to add two items to the shopping cart increase and decrease the quantitiy of the first item delete the second item and checkout of the cart sucessfully" time="0.541">
+    <testcase classname="CucumberJUnitReport-firefox.83_0.linux.React Shopping Cart" name="As a user I am able to add two items to the shopping cart increase and decrease the quantitiy of the first item delete the second item and checkout of the cart sucessfully" time="0.19">
       <failure/>
       <error message="unknown error: Reached error page: about:neterror?e=connectionFailure&amp;u=http%3A//localhost%3A3000/&amp;c=UTF-8&amp;d=Firefox%20can%E2%80%99t%20establish%20a%20connection%20to%20the%20server%20at%20localhost%3A3000."/>
       <system-out><![CDATA[
