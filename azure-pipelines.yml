@@ -21,11 +21,10 @@ steps:
 - task: DockerCompose@0
   inputs:
     containerregistrytype: 'Container Registry'
-    dockerComposeFile: docker-compose.yml
-    projectName: 'ui-auto-lab'
+    dockerRegistryEndpoint: 'DockerHub'
+    dockerComposeFile: '**/docker-compose.yml'
     action: 'Run a Docker Compose command'
-    dockerComposeCommand: 'docker-compose up'
-  displayName: 'Spin up selenium containers'
+    dockerComposeCommand: 'up'
 
 - script: 
     npm install
