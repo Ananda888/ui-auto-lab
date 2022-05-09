@@ -1,5 +1,6 @@
 # Node.js
 
+
 # Build a general Node.js project with npm.
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
@@ -26,6 +27,10 @@ steps:
     dockerComposeCommand: 'up'
     dockerComposePath: '/Users/anachu/easytravel-automation-test'
 
+- task: CmdLine@2
+  inputs:
+    script: 'docker-compose up'
+    workingDirectory: '/Users/anachu/easytravel-automation-test'
 
 - script: 
     npm install
@@ -33,5 +38,6 @@ steps:
 
 
 - script: 
+
     npm run test
   displayName: 'UI Automation Test' 
