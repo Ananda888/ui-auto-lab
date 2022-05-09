@@ -1,53 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="React Shopping Cart" timestamp="2022-05-06T10:08:55" time="1.518" tests="2" failures="2" errors="2" skipped="0">
+  <testsuite name="React Shopping Cart" timestamp="2022-05-09T13:51:46" time="2.323" tests="2" failures="0" errors="0" skipped="0">
     <properties>
       <property name="specId" value="0"/>
       <property name="featureName" value="React Shopping Cart"/>
-      <property name="capabilities" value="chrome.87_0_4280_88.linux"/>
+      <property name="capabilities" value="chrome.101_0_4951_41.linux"/>
       <property name="featureFile" value="./features/step-definitions/shoppingCart.feature"/>
     </properties>
-    <testcase classname="CucumberJUnitReport-chrome.87_0_4280_88.linux.React Shopping Cart" name="As a user I am able to add one item to the shopping cart and clear the shopping cart" time="0.944">
-      <failure/>
-      <error message="unknown error: unknown error: net::ERR_CONNECTION_REFUSED"/>
+    <testcase classname="CucumberJUnitReport-chrome.101_0_4951_41.linux.React Shopping Cart" name="As a user I am able to add one item to the shopping cart and clear the shopping cart" time="1.11">
       <system-out><![CDATA[
-❗ Given I am on the store page⚠️ When I am able to add one t-shirt to the cart
-⚠️ Then The t-shirt should be visible in the cart page
-⚠️ Then The total payment amount must be equal to the total price of the t-shirt
-⚠️ Then I am able to delete the t-shirt
-⚠️ When I clear the cart
-⚠️ Then The cart will be clear of items
-
+✅ Given I am on the store page✅ When I am able to add one t-shirt to the cart✅ Then The t-shirt should be visible in the cart page✅ Then The total payment amount must be equal to the total price of the t-shirt✅ Then I am able to delete the t-shirt✅ When I clear the cart✅ Then The cart will be clear of items
 ]]></system-out>
-      <system-err><![CDATA[
-unknown error: unknown error: net::ERR_CONNECTION_REFUSED
-  (Session info: chrome=87.0.4280.88)
-    at processTicksAndRejections (node:internal/process/task_queues:96:5)
-    at async World.<anonymous> (/Users/anachu/easytravel-automation-test/features/step-definitions/steps-common.js:12:5)
-]]></system-err>
     </testcase>
-    <testcase classname="CucumberJUnitReport-chrome.87_0_4280_88.linux.React Shopping Cart" name="As a user I am able to add two items to the shopping cart increase and decrease the quantitiy of the first item delete the second item and checkout of the cart sucessfully" time="0.543">
-      <failure/>
-      <error message="unknown error: unknown error: net::ERR_CONNECTION_REFUSED"/>
+    <testcase classname="CucumberJUnitReport-chrome.101_0_4951_41.linux.React Shopping Cart" name="As a user I am able to add two items to the shopping cart increase and decrease the quantitiy of the first item delete the second item and checkout of the cart sucessfully" time="1.188">
       <system-out><![CDATA[
-❗ Given I am on the store page⚠️ When I add two t-shirts to the cart
-⚠️ Then The two t-shirts should be visible in the cart page
-⚠️ When I increase the quantity of the first t-shirt to three
-⚠️ Then The total payment amount must be equal to the total price of the four t-shirts in the cart
-⚠️ When I decrease the quantity of the first item to two
-⚠️ Then The total payment amount must be equal to the total price of the three t-shirts in the cart
-⚠️ When I delete the second item
-⚠️ Then There only should be one item in the cart
-⚠️ When I checkout of the cart
-⚠️ Then The website tells me I have successfully checked out
-⚠️ Then The cart will be clear of items
+✅ Given I am on the store page✅ When I add two t-shirts to the cart✅ Then The two t-shirts should be visible in the cart page✅ When I increase the quantity of the first t-shirt to three✅ Then The total payment amount must be equal to the total price of the four t-shirts in the cart✅ When I decrease the quantity of the first item to two✅ Then The total payment amount must be equal to the total price of the three t-shirts in the cart✅ When I delete the second item✅ Then There only should be one item in the cart✅ When I checkout of the cart✅ Then The website tells me I have successfully checked out✅ Then The cart will be clear of items
 ]]></system-out>
-      <system-err><![CDATA[
-unknown error: unknown error: net::ERR_CONNECTION_REFUSED
-  (Session info: chrome=87.0.4280.88)
-    at processTicksAndRejections (node:internal/process/task_queues:96:5)
-    at async World.<anonymous> (/Users/anachu/easytravel-automation-test/features/step-definitions/steps-common.js:12:5)
-]]></system-err>
     </testcase>
   </testsuite>
 </testsuites>
