@@ -18,7 +18,7 @@ steps:
 - task: DockerCompose@0
   inputs:
     containerregistrytype: 'Container Registry'
-    dockerComposeFile: '**/docker-compose.yml'
+    dockerComposeFile: '/Users/anachu/easytravel-automation-test/docker-compose.yml'
     action: 'Run a Docker Compose command'
 
 - script: |
