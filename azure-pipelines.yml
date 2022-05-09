@@ -24,4 +24,4 @@ steps:
 - script: |
     image: hungphaminfo/react-shopping-cart
     npm run test
-    displayName: 'UI Automation Test' 
+  displayName: 'UI Automation Test' 
