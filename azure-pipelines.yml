@@ -15,17 +15,18 @@ steps:
     versionSpec: '12.x'
   displayName: 'Install Node.js'
 
+- task: DockerCompose@0
+  inputs:
+    containerregistrytype: 'Container Registry'
+    dockerComposeFile: '**/docker-compose.yml'
+    action: 'Run a Docker Compose command'
+
 - script: |
     npm install
     
   displayName: 'npm install'
-- script: |
-    
-    docker-compose up
-  displayName: 'Selenium Image' 
-    
-  
 
+  
 - script: |
     image: hungphaminfo/react-shopping-cart
     
