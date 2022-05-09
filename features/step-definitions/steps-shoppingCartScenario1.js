@@ -39,10 +39,7 @@ When(/^I clear the cart$/, async()=>
 {
     await cartPage.clearCart()
    
-<<<<<<< HEAD
-=======
 
->>>>>>> b0cb3266965bafb8f8b82cb8661fc44ca22285de
 })
 
     
