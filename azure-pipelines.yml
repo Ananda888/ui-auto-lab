@@ -22,10 +22,6 @@ steps:
 
 
 - script: |
-    docker pull hungphaminfo/react-shopping-cart
-    docker run -it -p 3000:3000 hungphaminfo/react-shopping-cart
-    displayName: 'Pull and Deploy Docker Image'
-
-- script: |
+    image: hungphaminfo/react-shopping-cart
     npm run test
     displayName: 'UI Automation Test' 
