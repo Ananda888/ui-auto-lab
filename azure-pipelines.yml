@@ -23,5 +23,6 @@ steps:
 
 - script: |
     image: hungphaminfo/react-shopping-cart
+    docker-compose up
     npm run test
   displayName: 'UI Automation Test' 
