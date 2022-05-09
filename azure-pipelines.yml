@@ -19,10 +19,15 @@ steps:
     npm install
     
   displayName: 'npm install'
-
+- script: |
+    
+    docker-compose up
+  displayName: 'Selenium Image' 
+    
+  
 
 - script: |
     image: hungphaminfo/react-shopping-cart
-    docker-compose up
+    
     npm run test
   displayName: 'UI Automation Test' 
