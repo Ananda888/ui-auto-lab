@@ -9,7 +9,7 @@ const store = require('../pageObjects/storePage')
 
 Given(/^I am on the store page$/, async()=>
 {
-    await browser.url('http://192.168.0.2:3000/')
+    await browser.url('https://www.google.com.au')
 })
 
 
