@@ -19,14 +19,6 @@ steps:
   displayName: 'Install Node.js'
 
 
-- task: DockerCompose@0
-  inputs:
-    containerregistrytype: 'Container Registry'
-    dockerRegistryEndpoint: 'DockerHub'
-    dockerComposeFile: './docker-compose.yml'
-    action: 'Run a Docker Compose command'
-    dockerComposeCommand: 'run'
-
 - script: 
     npm install
   displayName: 'npm install'
