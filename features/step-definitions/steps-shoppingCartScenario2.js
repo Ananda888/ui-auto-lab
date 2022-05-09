@@ -5,6 +5,12 @@ const { default: $$ } = require('webdriverio/build/commands/browser/$$')
 const { decreaseQuantity } = require('../pageObjects/cartPage')
 const cartPage = require('../pageObjects/cartPage')
 const store = require('../pageObjects/storePage')
+<<<<<<< HEAD
+=======
+//const tShirtName = ['Buffalo - Striploin', 'Bacardi Breezer - Tropical']
+//const config = require('../')
+
+>>>>>>> b0cb3266965bafb8f8b82cb8661fc44ca22285de
 
 When(/^I add two t-shirts to the cart$/, async()=>
 {
