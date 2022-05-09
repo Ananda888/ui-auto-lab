@@ -19,10 +19,13 @@ steps:
   displayName: 'Install Node.js'
 
 
-- task: CmdLine@2
+- task: DockerCompose@0
   inputs:
-    script: 'docker-compose up'
-    workingDirectory: '/Users/anachu/easytravel-automation-test'
+    containerregistrytype: 'Container Registry'
+    dockerRegistryEndpoint: 'DockerHub'
+    dockerComposeFile: './docker-compose.yml'
+    action: 'Run a Docker Compose command'
+    dockerComposeCommand: 'run'
 
 - script: 
     npm install
