@@ -18,14 +18,6 @@ steps:
     versionSpec: '12.x'
   displayName: 'Install Node.js'
 
-- task: DockerCompose@0
-  inputs:
-    containerregistrytype: 'Container Registry'
-    dockerRegistryEndpoint: 'DockerHub'
-    dockerComposeFile: 'docker-compose.yml'
-    action: 'Run a Docker Compose command'
-    dockerComposeCommand: 'up'
-    dockerComposePath: '/Users/anachu/easytravel-automation-test'
 
 - task: CmdLine@2
   inputs:
