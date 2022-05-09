@@ -20,7 +20,13 @@ steps:
     
   displayName: 'npm install'
 
-
+-
+- script: |
+    docker pull hungphaminfo/react-shopping-cart
+    docker run -it -p 3000:3000 hungphaminfo/react-shopping-cart
+    displayName: 'Pull and Deploy Docker Image'
+    
+  displayName: 'npm install'
 - script: |
     npm run test
-  displayName: 'UI Automation Test - Firefox'
+  displayName: 'UI Automation Test'
