@@ -21,7 +21,7 @@ steps:
 - task: DockerCompose@0
   inputs:
     containerregistrytype: 'Container Registry'
-    dockerComposeFile: '**/docker-compose.yml'
+    dockerComposeFile: 'ui-auto-lab/docker-compose.yml'
     projectName: 'ui-auto-lab'
     action: 'Run a Docker Compose command'
     dockerComposeCommand: 'docker-compose up'
