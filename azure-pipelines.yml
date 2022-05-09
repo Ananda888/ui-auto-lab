@@ -7,6 +7,8 @@
 trigger:
 - pipeline
 
+
+
 pool:
   vmImage: macOS-latest
 
@@ -16,18 +18,21 @@ steps:
     versionSpec: '12.x'
   displayName: 'Install Node.js'
 
-- task: DockerInstaller@0
+- task: DockerCompose@0
   inputs:
-    dockerVersion: '17.09.0-ce'
-  displayName: 'Install docker-cli'
+    containerregistrytype: 'Container Registry'
+    dockerComposeFile: '**/docker-compose.yml'
+    projectName: 'ui-auto-lab'
+    action: 'Run a Docker Compose command'
+    dockerComposeCommand: 'docker-compose up'
+  displayName: 'Spin up selenium containers'
 
-- script: |
+- script: 
     npm install
   displayName: 'npm install'
 
-  
-- script: |
-    image: hungphaminfo/react-shopping-cart
-    docker-compose up
+
+- script: 
+   
     npm run test
   displayName: 'UI Automation Test' 
