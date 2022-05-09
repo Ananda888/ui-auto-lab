@@ -8,7 +8,6 @@ trigger:
 - pipeline
 
 
-
 pool:
   vmImage: macOS-latest
 
@@ -34,6 +33,5 @@ steps:
 
 
 - script: 
-   
     npm run test
   displayName: 'UI Automation Test' 
