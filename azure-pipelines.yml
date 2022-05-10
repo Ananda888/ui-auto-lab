@@ -9,6 +9,7 @@ trigger:
 - pipeline
 
 
+
 pool:
   vmImage: macOS-latest
 
@@ -18,6 +19,12 @@ steps:
     versionSpec: '12.x'
   displayName: 'Install Node.js'
 
+- task: CmdLine@2
+  inputs:
+    script: |
+      docker pull hungphaminfo/react-shopping-cart
+      
+      docker run -it -p 3000:3000 hungphaminfo/react-shopping-cart
 
 - script: 
     npm install
