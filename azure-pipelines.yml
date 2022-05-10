@@ -26,16 +26,12 @@ steps:
   inputs:
     containerRegistry: 'DockerHub'
     command: 'login'
-- task: CmdLine@2
-  inputs:
-    script: |
-      docker pull hungphaminfo/react-shopping-cart
-      docker run -it -p 3000:3000 hungphaminfo/react-shopping-cart
 
-- task: CmdLine@2
+- task: Docker@2
   inputs:
-    script: |
-      docker-compose up
+    containerRegistry: 'DockerHub'
+    command: 'pull'
+    arguments: 'hungphaminfo/react-shopping-cart'
      
   
 - script: 
