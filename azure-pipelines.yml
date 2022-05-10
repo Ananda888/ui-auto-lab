@@ -28,6 +28,20 @@ steps:
     containerRegistry: 'DockerHub'
     command: 'login'
   displayName: 'Login to DockerHub'
+
+- task: DockerCompose@0
+  inputs:
+    containerregistrytype: 'Container Registry'
+    dockerRegistryEndpoint: 'DockerHub'
+    dockerComposeFile: '/docker-compose.yml'
+    action: 'Build services'
+- task: DockerCompose@0
+  inputs:
+    containerregistrytype: 'Container Registry'
+    dockerRegistryEndpoint: 'DockerHub'
+    dockerComposeFile: '/docker-compose.yml'
+    action: 'Push services'
+
 - task: DockerCompose@0
   inputs:
     containerregistrytype: 'Container Registry'
@@ -35,14 +49,6 @@ steps:
     dockerComposeFile: '/docker-compose.yml'
     action: 'Run a Docker Compose command'
     dockerComposeCommand: 'up'
-  displayName: 'Spin up selenium image'
-- task: Docker@2
-  inputs:
-    containerRegistry: 'DockerHub'
-    command: 'pull'
-    arguments: 'hungphaminfo/react-shopping-cart'
-  displayName: 'Pull react shopping cart image'
-
 - task: Docker@2
   inputs:
     containerRegistry: 'DockerHub'
