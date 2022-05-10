@@ -22,12 +22,16 @@ steps:
 - task: DockerInstaller@0
   inputs:
     dockerVersion: '17.09.0-ce'
+
+- task: Docker@2
+  inputs:
+    command: 'login'
 - task: CmdLine@2
   inputs:
     script: |
       docker pull hungphaminfo/react-shopping-cart
       docker run -it -p 3000:3000 hungphaminfo/react-shopping-cart
-  
+
 - task: CmdLine@2
   inputs:
     script: |
