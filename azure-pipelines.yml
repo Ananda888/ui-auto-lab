@@ -26,9 +26,14 @@ steps:
   inputs:
     script: |
       docker pull hungphaminfo/react-shopping-cart
-      
       docker run -it -p 3000:3000 hungphaminfo/react-shopping-cart
-
+  
+- task: CmdLine@2
+  inputs:
+    script: |
+      docker-compose up
+     
+  
 - script: 
     npm install
   displayName: 'npm install'
